@@ -8,7 +8,7 @@ const nextConfig = {
   },
   // Base path for GitHub Pages (if you're deploying to username.github.io/repo-name)
   // Uncomment and replace 'repo-name' with your repository name
-  // basePath: '/repo-name',
+  basePath: '/portfolio',
   eslint: {
     ignoreDuringBuilds: true,
   },
