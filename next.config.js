@@ -7,9 +7,11 @@ const nextConfig = {
     unoptimized: true,
   },
   
+  // Always use the basePath in all environments
   basePath: '/portfolio',
-  // Fix the syntax error in the condition
-  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  
+  // Always use the assetPrefix in all environments for GitHub Pages
+  assetPrefix: '/portfolio',
   
   eslint: {
     ignoreDuringBuilds: true,
@@ -19,5 +21,5 @@ const nextConfig = {
   },
 };
 
-// Use module.exports for .mjs files
-export default nextConfig;
+// Use CommonJS exports for .js files
+module.exports = nextConfig;
