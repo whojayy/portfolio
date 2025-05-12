@@ -6,8 +6,11 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-
+  
   basePath: '/portfolio',
+  // Fix the syntax error in the condition
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  
   eslint: {
     ignoreDuringBuilds: true,
   },
@@ -16,4 +19,5 @@ const nextConfig = {
   },
 };
 
-export default nextConfig;
+// Use module.exports for .mjs files
+module.exports = nextConfig;
