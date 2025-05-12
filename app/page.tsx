@@ -12,7 +12,7 @@ import TechStack from "@/components/tech-stack"
 import Resume from "@/components/resume"
 import { ErrorBoundary } from "react-error-boundary"
 
-function ErrorFallback({ error, resetErrorBoundary }) {
+function ErrorFallback({ error, resetErrorBoundary }: { error: Error; resetErrorBoundary: () => void }) {
   return (
     <div className="p-4 border border-red-500 rounded-md bg-red-50 dark:bg-red-900/20">
       <p className="text-red-500">Something went wrong:</p>

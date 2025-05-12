@@ -2,16 +2,16 @@
 const nextConfig = {
   // Enable static exports for GitHub Pages
   output: 'export',
+  
   // Disable image optimization for static export
   images: {
     unoptimized: true,
   },
   
-  // Always use the basePath in all environments
-  basePath: '/portfolio',
-  
-  // Always use the assetPrefix in all environments for GitHub Pages
-  assetPrefix: '/portfolio',
+  // Conditionally apply basePath and assetPrefix based on environment
+  // Only use them in production, not in development
+  basePath: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
+  assetPrefix: process.env.NODE_ENV === 'production' ? '/portfolio' : '',
   
   eslint: {
     ignoreDuringBuilds: true,
@@ -21,5 +21,4 @@ const nextConfig = {
   },
 };
 
-// Use CommonJS exports for .js files
-module.exports = nextConfig;
+export default nextConfig;
