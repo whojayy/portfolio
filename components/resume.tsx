@@ -5,6 +5,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Download, Eye } from "lucide-react"
 import Link from "next/link"
 import { useState } from "react"
+import { getAssetPath } from "@/lib/asset-path"
 
 export default function Resume() {
   const [resumeError, setResumeError] = useState(false)
@@ -36,7 +37,7 @@ export default function Resume() {
                     <>
                       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-black/30"></div>
                       <iframe
-                        src="/resume.html"
+                        src={getAssetPath("/resume.html")}
                         className="absolute inset-0 w-full h-full border-0"
                         title="Resume Preview"
                         onError={() => setResumeError(true)}
@@ -52,18 +53,18 @@ export default function Resume() {
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Button asChild>
-                      <Link href="/resume.html" target="_blank" rel="noopener noreferrer">
+                      <Link href={getAssetPath("/resume.html")} target="_blank" rel="noopener noreferrer">
                         <Eye className="mr-2 h-4 w-4" />
                         View Resume
                       </Link>
                     </Button>
                     <Button variant="outline" asChild>
                       <a
-                        href="/resume.html"
+                        href={getAssetPath("/resume.html")}
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={() => {
-                          const win = window.open("/resume.html", "_blank")
+                          const win = window.open(getAssetPath("/resume.html"), "_blank")
                           if (win) {
                             setTimeout(() => {
                               win.print()

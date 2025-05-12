@@ -1,4 +1,5 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
+import { getAssetPath } from "@/lib/asset-path"
 
 export default function TechStack() {
   return (
@@ -22,13 +23,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/python-logo.png"
+                      src={getAssetPath("/python-logo.png") || "/placeholder.svg"}
                       alt="Python"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -38,13 +39,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/tensorflow-logo.png"
+                      src={getAssetPath("/tensorflow-logo.png") || "/placeholder.svg"}
                       alt="TensorFlow"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -54,13 +55,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/pytorch-logo.png"
+                      src={getAssetPath("/pytorch-logo.png") || "/placeholder.svg"}
                       alt="PyTorch"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -70,13 +71,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/scikit-learn-logo.png"
+                      src={getAssetPath("/scikit-learn-logo.png") || "/placeholder.svg"}
                       alt="Scikit-learn"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -86,13 +87,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/pandas-logo.png"
+                      src={getAssetPath("/pandas-logo.png") || "/placeholder.svg"}
                       alt="Pandas"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -102,13 +103,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/numpy-logo.png"
+                      src={getAssetPath("/numpy-logo.png") || "/placeholder.svg"}
                       alt="NumPy"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -118,13 +119,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/opencv-logo.png"
+                      src={getAssetPath("/opencv-logo.png") || "/placeholder.svg"}
                       alt="OpenCV"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -134,13 +135,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/aws-logo.png"
+                      src={getAssetPath("/aws-logo.png") || "/placeholder.svg"}
                       alt="AWS"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -150,13 +151,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/powerbi-logo.png"
+                      src={getAssetPath("/powerbi-logo.png") || "/placeholder.svg"}
                       alt="Power BI"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>
@@ -190,13 +191,13 @@ export default function TechStack() {
                 <div className="bg-card border rounded-lg p-4 flex flex-col items-center justify-center text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mb-3">
                     <img
-                      src="/docker-logo.png"
+                      src={getAssetPath("/docker-logo.png") || "/placeholder.svg"}
                       alt="Docker"
                       className="w-6 h-6"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
                         target.onerror = null
-                        target.src = "/abstract-tech-logo.png"
+                        target.src = getAssetPath("/abstract-tech-logo.png")
                       }}
                     />
                   </div>

@@ -1,12 +1,12 @@
 "use client"
 
 import { useState } from "react"
-import Image from "next/image"
 import Link from "next/link"
 import { Badge } from "@/components/ui/badge"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Github } from "lucide-react"
+import { getAssetPath } from "@/lib/asset-path"
 
 // Project data
 const projects = [
@@ -85,14 +85,15 @@ export default function Projects() {
               <Card key={project.id} className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="relative aspect-video overflow-hidden md:order-last">
-                    <Image
-                      src={project.image || "/placeholder.svg?height=400&width=600&query=project"}
+                    {/* Using a regular img tag instead of Next.js Image component for static export compatibility */}
+                    <img
+                      src={getAssetPath(project.image) || "/placeholder.svg"}
                       alt={project.title}
-                      fill
-                      className="object-cover transition-transform hover:scale-105"
+                      className="absolute inset-0 w-full h-full object-cover transition-transform hover:scale-105"
                       onError={(e) => {
                         const target = e.target as HTMLImageElement
-                        target.src = "/project-management-team.png"
+                        target.onerror = null
+                        target.src = getAssetPath("/project-management-team.png")
                       }}
                     />
                   </div>
@@ -125,7 +126,7 @@ export default function Projects() {
                     </CardContent>
                     <CardFooter className="p-0 flex justify-between items-center">
                       <Button variant="outline" size="sm" asChild>
-                        <Link href="https://github.com/whojayy" target="_blank">
+                        <Link href={project.github} target="_blank">
                           <Github className="mr-2 h-4 w-4" />
                           Code
                         </Link>
