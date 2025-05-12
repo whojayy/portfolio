@@ -20,4 +20,4 @@ const nextConfig = {
 };
 
 // Use module.exports for .mjs files
-module.exports = nextConfig;
+export default nextConfig;
