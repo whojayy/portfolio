@@ -6,8 +6,7 @@ const nextConfig = {
   images: {
     unoptimized: true,
   },
-  // Base path for GitHub Pages (if you're deploying to username.github.io/repo-name)
-  // Uncomment and replace 'repo-name' with your repository name
+
   basePath: '/portfolio',
   eslint: {
     ignoreDuringBuilds: true,
