@@ -1,5 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { Award } from "lucide-react"
+import { Award, ExternalLink } from "lucide-react"
+import Link from "next/link"
 
 export default function Certifications() {
   return (
@@ -35,6 +36,15 @@ export default function Certifications() {
                     Data Visualization, GitHub, Data Science, Analytics, SQL, Jupyter, Data Analysis, Python
                   </p>
                 </div>
+                <div className="mt-4">
+                  <Link
+                    href="https://www.coursera.org/account/accomplishments/specialization/WAV5UGJLQC8A"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                  >
+                    View Certification <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -57,6 +67,15 @@ export default function Certifications() {
                   <p className="text-sm text-muted-foreground">
                     Machine Learning, Python, Scikit-learn, Regression, Classification, Clustering, Neural Networks
                   </p>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="https://www.coursera.org/account/accomplishments/verify/SYMEN437DMM2"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                  >
+                    View Certification <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -82,6 +101,15 @@ export default function Certifications() {
                   <p className="text-sm text-muted-foreground">
                     SQL, Database Management, Python, Data Analysis, IBM Db2, SQLite
                   </p>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="https://www.coursera.org/account/accomplishments/verify/GT2R8B3UL8DG"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                  >
+                    View Certification <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
               </CardContent>
             </Card>
@@ -110,6 +138,15 @@ export default function Certifications() {
                     Probability Theory, Statistics, Linear Algebra
                   </p>
                 </div>
+                <div className="mt-4">
+                  <Link
+                    href="https://www.coursera.org/account/accomplishments/verify/NJZESJZH4LQN"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                  >
+                    View Certification <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -136,6 +173,15 @@ export default function Certifications() {
                     Data Science, Machine Learning, Data Visualization, Methodology, Project Management, Python
                   </p>
                 </div>
+                <div className="mt-4">
+                  <Link
+                    href="https://www.coursera.org/account/accomplishments/verify/XWFPCHAFQCG3"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                  >
+                    View Certification <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
+                </div>
               </CardContent>
             </Card>
 
@@ -161,6 +207,15 @@ export default function Certifications() {
                   <p className="text-sm text-muted-foreground">
                     Bootstrap, PostgreSQL, Node.js, JavaScript, Express.js, CSS, React.js, SQL, HTML5, jQuery
                   </p>
+                </div>
+                <div className="mt-4">
+                  <Link
+                    href="https://www.udemy.com/certificate/UC-b0ebfe21-c916-4535-8261-ca0131fe393c/"
+                    target="_blank"
+                    className="inline-flex items-center justify-center px-4 py-2 text-sm font-medium text-white bg-purple-600 rounded-md hover:bg-purple-700 transition-colors"
+                  >
+                    View Certification <ExternalLink className="ml-2 h-4 w-4" />
+                  </Link>
                 </div>
               </CardContent>
             </Card>

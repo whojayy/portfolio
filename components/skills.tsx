@@ -24,10 +24,13 @@ export default function Skills() {
                 <div className="flex flex-wrap gap-2">
                   <Badge>Python</Badge>
                   <Badge>SQL</Badge>
+                  <Badge>NoSQL</Badge>
                   <Badge>R</Badge>
                   <Badge>MATLAB</Badge>
                   <Badge>JavaScript</Badge>
                   <Badge>TypeScript</Badge>
+                  <Badge>Next.js</Badge>
+                  <Badge>Node.js</Badge>
                   <Badge>HTML/CSS</Badge>
                 </div>
               </CardContent>
@@ -115,6 +118,9 @@ export default function Skills() {
                   <Badge>AWS Lambda</Badge>
                   <Badge>AWS EC2</Badge>
                   <Badge>AWS CloudFormation</Badge>
+                  <Badge>Azure Machine Learning</Badge>
+                  <Badge>Azure Machine Learning Endpoints</Badge>
+                  <Badge>Azure Blob Storage</Badge>
                   <Badge>TensorFlow.js</Badge>
                   <Badge>TFLite</Badge>
                   <Badge>Model Optimization</Badge>
