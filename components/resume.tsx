@@ -30,7 +30,7 @@ export default function Resume() {
               <div className="flex flex-col md:flex-row gap-4 items-center justify-center md:justify-start">
                 {/* CHANGE #1: Replace the iframe with a clickable div */}
                 <Link 
-                  href={getAssetPath("/resume.html")} 
+                  href="/resume.html" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="relative aspect-[8.5/11] w-full max-w-[250px] overflow-hidden rounded-lg border cursor-pointer transition-transform hover:scale-105"
@@ -72,14 +72,14 @@ export default function Resume() {
                   </p>
                   <div className="flex flex-wrap gap-4">
                     <Button asChild>
-                      <Link href={getAssetPath("/resume.html")} target="_blank" rel="noopener noreferrer">
+                      <Link href="/resume.html" target="_blank" rel="noopener noreferrer">
                         <Eye className="mr-2 h-4 w-4" />
                         View Resume
                       </Link>
                     </Button>
                     <Button variant="outline" asChild>
                       <a
-                        href={getAssetPath("/resume.html")}
+                        href="/resume.html" 
                         target="_blank"
                         rel="noopener noreferrer"
                         onClick={(e) => {
