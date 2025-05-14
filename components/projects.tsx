@@ -8,18 +8,14 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { ChevronLeft, ChevronRight, Github, FileText } from "lucide-react"
 import { getAssetPath } from "@/lib/asset-path"
 
-// Project data with support for both images and videos
+// Project data
 const projects = [
   {
     id: 1,
     title: "Soccer Player Detection and Match Analysis System",
     description:
       "A comprehensive soccer match analysis system using computer vision for player detection, team classification, and spatial analytics.",
-    media: [
-      { path: "/soccer-analysis-system.png", type: "image" },
-      { path: "/project-management-team.png", type: "image" },
-      { path: "/ai-image-generator-app.png", type: "image" },
-    ],
+    images: ["/soccer-analysis-system.png", "/project-management-team.png", "/ai-image-generator-app.png"],
     tags: ["Python", "YOLOv8", "Amazon SageMaker", "PyTorch", "OpenCV", "UMAP", "ByteTrack"],
     github: "https://github.com",
     readme: "https://github.com/readme",
@@ -36,11 +32,7 @@ const projects = [
     title: "Predicting Chronic Conditions Using Machine Learning",
     description:
       "A machine learning system to predict chronic health conditions using the Canadian Community Health Survey dataset.",
-    media: [
-      { path: "/chronic-conditions-prediction.png", type: "image" },
-      { path: "/input_vid.gif", type: "image" },
-      { path: "/input_vid.mp4", type: "video" },
-    ],
+    images: ["/chronic-conditions-prediction.png", "/ecommerce-dashboard.png", "/blockchain-explorer-interface.png"],
     tags: ["Python", "Scikit-learn", "TensorFlow", "XGBoost", "Streamlit", "SMOTE", "Pandas"],
     github: "https://github.com",
     readme: "https://github.com/readme",
@@ -57,11 +49,7 @@ const projects = [
     title: "Hand Gesture Recognition with TensorFlow",
     description:
       "A real-time hand gesture recognition system using TensorFlow Object Detection API for interactive applications.",
-    media: [
-      { path: "/hand-gesture-recognition.png", type: "image" },
-      { path: "/gesture-demo.mp4", type: "video" },
-      { path: "/abstract-tech-logo.png", type: "image" },
-    ],
+    images: ["/hand-gesture-recognition.png", "/augmented-reality-shopping-app.png", "/abstract-tech-logo.png"],
     tags: ["Python", "TensorFlow", "OpenCV", "TensorFlow.js", "TFLite", "Computer Vision"],
     github: "https://github.com",
     readme: "https://github.com/readme",
@@ -78,11 +66,7 @@ const projects = [
     title: "Intelligent Document Processing System",
     description:
       "An end-to-end document processing system that extracts, classifies, and analyzes information from various document types using deep learning.",
-    media: [
-      { path: "/project-management-team.png", type: "image" },
-      { path: "/document-processing.mp4", type: "video" },
-      { path: "/blockchain-explorer-interface.png", type: "image" },
-    ],
+    images: ["/project-management-team.png", "/ecommerce-dashboard.png", "/blockchain-explorer-interface.png"],
     tags: ["Python", "PyTorch", "Transformers", "OCR", "NLP", "FastAPI", "React"],
     github: "https://github.com",
     readme: "https://github.com/readme",
@@ -99,11 +83,7 @@ const projects = [
     title: "Personalized Recommendation Engine",
     description:
       "A hybrid recommendation system combining collaborative filtering and content-based approaches for e-commerce product recommendations.",
-    media: [
-      { path: "/overview-sample.gif", type: "image" },
-      { path: "/summary-sample.gif", type: "image" },
-      { path: "/details-sample.gif", type: "image" },
-    ],
+    images: ["/summary-sample.gif", "/input_vid.gif", "/abstract-tech-logo.png"],
     tags: ["Python", "TensorFlow", "AWS", "Neo4j", "Redis", "FastAPI", "A/B Testing"],
     github: "https://github.com",
     readme: "https://github.com/readme",
@@ -120,11 +100,7 @@ const projects = [
     title: "Conversational AI Assistant for Healthcare",
     description:
       "A specialized healthcare assistant that provides medical information, symptom assessment, and medication reminders using advanced NLP techniques.",
-    media: [
-      { path: "/ai-image-generator-app.png", type: "image" },
-      { path: "/healthcare-assistant.mp4", type: "video" },
-      { path: "/project-management-team.png", type: "image" },
-    ],
+    images: ["/ai-image-generator-app.png", "/augmented-reality-shopping-app.png", "/project-management-team.png"],
     tags: ["Python", "LangChain", "RAG", "Vector Database", "FastAPI", "React Native", "AWS"],
     github: "https://github.com",
     readme: "https://github.com/readme",
@@ -139,22 +115,22 @@ const projects = [
 ]
 
 export default function Projects() {
-  // State to track the current media item for each project
-  const [currentMediaIndex, setCurrentMediaIndex] = useState<Record<number, number>>({})
+  // State to track the current image for each project
+  const [currentImageIndex, setCurrentImageIndex] = useState<Record<number, number>>({})
 
-  // Function to navigate to the next media item for a specific project
-  const nextMedia = (projectId: number, totalMedia: number) => {
-    setCurrentMediaIndex((prev) => ({
+  // Function to navigate to the next image for a specific project
+  const nextImage = (projectId: number, totalImages: number) => {
+    setCurrentImageIndex((prev) => ({
       ...prev,
-      [projectId]: ((prev[projectId] || 0) + 1) % totalMedia,
+      [projectId]: ((prev[projectId] || 0) + 1) % totalImages,
     }))
   }
 
-  // Function to navigate to the previous media item for a specific project
-  const prevMedia = (projectId: number, totalMedia: number) => {
-    setCurrentMediaIndex((prev) => ({
+  // Function to navigate to the previous image for a specific project
+  const prevImage = (projectId: number, totalImages: number) => {
+    setCurrentImageIndex((prev) => ({
       ...prev,
-      [projectId]: ((prev[projectId] || 0) - 1 + totalMedia) % totalMedia,
+      [projectId]: ((prev[projectId] || 0) - 1 + totalImages) % totalImages,
     }))
   }
 
@@ -172,74 +148,59 @@ export default function Projects() {
               <Card key={project.id} className="overflow-hidden">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div className="relative aspect-video overflow-hidden md:order-last">
-                    {/* Media carousel */}
+                    {/* Image carousel */}
                     <div className="relative w-full h-full">
-                      {project.media[currentMediaIndex[project.id] || 0].type === "video" ? (
-                        <video
-                          src={project.media[currentMediaIndex[project.id] || 0].path}
-                          className="absolute inset-0 w-full h-full object-cover transition-all duration-300"
-                          controls
-                          autoPlay
-                          muted
-                          loop
-                          onError={(e) => {
-                            const target = e.target as HTMLVideoElement
-                            console.error("Video failed to load:", target.src)
-                          }}
-                        />
-                      ) : (
-                        <img
-                          src={project.media[currentMediaIndex[project.id] || 0].path}
-                          alt={`${project.title} - Image ${(currentMediaIndex[project.id] || 0) + 1}`}
-                          className="absolute inset-0 w-full h-full object-cover transition-all duration-300"
-                          onError={(e) => {
-                            const target = e.target as HTMLImageElement
-                            target.onerror = null
-                            target.src = "/placeholder.jpg"
-                          }}
-                        />
-                      )}
+                      <img
+                        src={getAssetPath(project.images[currentImageIndex[project.id] || 0]) || "/placeholder.jpg"}
+                        alt={`${project.title} - Image ${(currentImageIndex[project.id] || 0) + 1}`}
+                        className="absolute inset-0 w-full h-full object-cover transition-all duration-300"
+                        onError={(e) => {
+                          const target = e.target as HTMLImageElement
+                          target.onerror = null
+                          target.src = getAssetPath("/placeholder.jpg")
+                        }}
+                      />
 
                       {/* Navigation buttons */}
-                      {project.media.length > 1 && (
+                      {project.images.length > 1 && (
                         <>
                           <button
                             onClick={(e) => {
                               e.preventDefault()
-                              prevMedia(project.id, project.media.length)
+                              prevImage(project.id, project.images.length)
                             }}
                             className="absolute left-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-1 hover:bg-black/70 transition-colors"
-                            aria-label="Previous media"
+                            aria-label="Previous image"
                           >
                             <ChevronLeft className="h-5 w-5" />
                           </button>
                           <button
                             onClick={(e) => {
                               e.preventDefault()
-                              nextMedia(project.id, project.media.length)
+                              nextImage(project.id, project.images.length)
                             }}
                             className="absolute right-2 top-1/2 -translate-y-1/2 bg-black/50 text-white rounded-full p-1 hover:bg-black/70 transition-colors"
-                            aria-label="Next media"
+                            aria-label="Next image"
                           >
                             <ChevronRight className="h-5 w-5" />
                           </button>
 
-                          {/* Media indicators */}
+                          {/* Image indicators */}
                           <div className="absolute bottom-2 left-1/2 -translate-x-1/2 flex gap-1.5">
-                            {project.media.map((item, index) => (
+                            {project.images.map((_, index) => (
                               <button
                                 key={index}
                                 onClick={(e) => {
                                   e.preventDefault()
-                                  setCurrentMediaIndex((prev) => ({
+                                  setCurrentImageIndex((prev) => ({
                                     ...prev,
                                     [project.id]: index,
                                   }))
                                 }}
                                 className={`w-2 h-2 rounded-full transition-all ${
-                                  (currentMediaIndex[project.id] || 0) === index ? "bg-white scale-125" : "bg-white/50"
+                                  (currentImageIndex[project.id] || 0) === index ? "bg-white scale-125" : "bg-white/50"
                                 }`}
-                                aria-label={`Go to media ${index + 1}`}
+                                aria-label={`Go to image ${index + 1}`}
                               />
                             ))}
                           </div>
