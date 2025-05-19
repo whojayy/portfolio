@@ -25,9 +25,9 @@
     body {
       background-color: var(--light);
       color: var(--dark);
-      font-size: 14px;
-      line-height: 1.5;
-      padding: 2rem;
+      font-size: 12px;
+      line-height: 1.3;
+      padding: 1rem;
       max-width: 8.5in;
       margin: 0 auto;
     }
@@ -35,51 +35,57 @@
     .resume {
       background-color: white;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-      padding: 2rem;
+      padding: 1rem;
       max-width: 8.5in;
       margin: 0 auto;
     }
     
     .header {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.75rem;
     }
     
     .header h1 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 700;
       color: var(--dark);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.25rem;
+    }
+    
+    .header p {
+      color: var(--dark-light);
+      margin-bottom: 0.25rem;
+      font-size: 0.9rem;
     }
     
     .contact-info {
       display: flex;
       flex-wrap: wrap;
-      gap: 1rem;
-      font-size: 0.9rem;
+      gap: 0.75rem;
+      font-size: 0.8rem;
       color: var(--dark-light);
     }
     
     .section {
-      margin-bottom: 1.5rem;
+      margin-bottom: 0.75rem;
     }
     
     .section-title {
-      font-size: 1.2rem;
+      font-size: 1rem;
       font-weight: 600;
       color: var(--primary);
-      margin-bottom: 0.75rem;
-      border-bottom: 2px solid var(--light-gray);
-      padding-bottom: 0.25rem;
+      margin-bottom: 0.25rem;
+      border-bottom: 1px solid var(--light-gray);
+      padding-bottom: 0.15rem;
     }
     
     .entry {
-      margin-bottom: 1rem;
+      margin-bottom: 0.5rem;
     }
     
     .entry-header {
       display: flex;
       justify-content: space-between;
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
     }
     
     .entry-title {
@@ -90,54 +96,52 @@
     .entry-subtitle {
       font-weight: 500;
       color: var(--dark-light);
-      margin-bottom: 0.25rem;
+      margin-bottom: 0.15rem;
     }
     
     .entry-date {
       color: var(--gray);
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
     
     ul {
-      padding-left: 1.5rem;
-      margin-top: 0.5rem;
+      padding-left: 1.25rem;
+      margin-top: 0.15rem;
+      margin-bottom: 0.25rem;
     }
     
     li {
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.15rem;
     }
     
     .skills-list {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
+      gap: 0.25rem;
       list-style: none;
       padding-left: 0;
     }
     
     .skills-category {
-      margin-bottom: 0.75rem;
+      margin-bottom: 0.25rem;
+      display: flex;
+      flex-wrap: wrap;
     }
     
     .skills-category-title {
       font-weight: 600;
-      margin-bottom: 0.25rem;
+      margin-right: 0.25rem;
     }
     
     .project {
-      margin-bottom: 1.25rem;
+      margin-bottom: 0.5rem;
     }
     
     .project-title {
       font-weight: 600;
       color: var(--dark);
-      margin-bottom: 0.25rem;
-    }
-    
-    .project-tech {
-      color: var(--primary);
+      margin-bottom: 0.15rem;
       font-size: 0.9rem;
-      margin-bottom: 0.5rem;
     }
     
     .highlight {
@@ -148,15 +152,95 @@
       body {
         padding: 0;
         background-color: white;
+        font-size: 10px;
       }
       
       .resume {
         box-shadow: none;
-        padding: 0.5in;
+        padding: 0.25in;
+        max-width: 100%;
+        width: 100%;
       }
       
       @page {
-        margin: 0.5in;
+        margin: 0.25in;
+        size: letter portrait;
+      }
+      
+      .header h1 {
+        font-size: 16px;
+      }
+      
+      .header p {
+        font-size: 12px;
+      }
+      
+      .section-title {
+        font-size: 12px;
+      }
+      
+      .entry-title, .project-title {
+        font-size: 11px;
+      }
+      
+      .entry-subtitle {
+        font-size: 10px;
+      }
+      
+      li {
+        margin-bottom: 0.1rem;
+      }
+      
+      .skills-category {
+        margin-bottom: 0.15rem;
+      }
+      
+      /* Hide the download button when printing */
+      #download-button {
+        display: none;
+      }
+    }
+
+    @media (max-width: 600px) {
+      body {
+        padding: 0.25rem;
+      }
+      
+      .resume {
+        padding: 0.5rem;
+      }
+      
+      .header h1 {
+        font-size: 1.25rem;
+      }
+      
+      .header p {
+        font-size: 0.8rem;
+      }
+      
+      .contact-info {
+        flex-direction: column;
+        gap: 0.25rem;
+      }
+      
+      .section-title {
+        font-size: 1rem;
+      }
+      
+      .entry-header {
+        flex-direction: column;
+        gap: 0.15rem;
+      }
+      
+      .entry-date {
+        margin-top: 0.15rem;
+      }
+      
+      #download-button {
+        top: 5px;
+        right: 5px;
+        padding: 6px 10px;
+        font-size: 0.7rem;
       }
     }
   </style>
@@ -165,167 +249,154 @@
   <div class="resume">
     <div class="header">
       <h1>Jay Mewada</h1>
+      <p>ML Engineer with 1.5+ years of experience in building scalable models using Machine Learning and cloud technologies</p>
       <div class="contact-info">
-        <div>Mobile: +1 782 882 6984</div>
-        <div><a href="https://www.linkedin.com/in/jay--mewada/">linkedin.com/in/jay–-mewada</a></div>
+        <div>+1 (782) 882-6984</div>
         <div><a href="mailto:jaymewada2001@gmail.com">jaymewada2001@gmail.com</a></div>
-        <div>Halifax, NS, Canada</div>
+        <div><a href="https://www.linkedin.com/in/jay--mewada/">Linkedin</a></div>
+        <div><a href="https://github.com/whojayy">Github</a></div>
+        <div><a href="#">Personal Portfolio</a></div>
       </div>
     </div>
     
     <div class="section">
-      <h2 class="section-title">Education</h2>
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-title">Dalhousie University</div>
-          <div class="entry-date">Halifax, NS</div>
-        </div>
-        <div class="entry-subtitle">Master of Digital Innovation - Data Science</div>
-        <div class="entry-date">Sept. 2024</div>
-      </div>
-    </div>
-    
-    <div class="section">
-      <h2 class="section-title">Experience</h2>
-      
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-title">Junior Data Scientist</div>
-          <div class="entry-date">Apr 2023 - Jul 2024</div>
-        </div>
-        <div class="entry-subtitle">TechVida Labs, Ahmedabad, India</div>
-        <ul>
-          <li><span class="highlight">ML Model Development & Deployment:</span> Led end-to-end machine learning projects from data collection to production deployment on AWS SageMaker, implementing CI/CD pipelines for automated model updates.</li>
-          <li><span class="highlight">MLOps Implementation:</span> Established MLOps practices including model versioning, monitoring, and A/B testing frameworks that improved model reliability by 35% and reduced deployment time by 60%.</li>
-          <li><span class="highlight">Agentic AI Development:</span> Architected intelligent AI agents using LangChain and custom frameworks that could autonomously perform complex tasks and reasoning, resulting in 40% efficiency improvements for client workflows.</li>
-          <li><span class="highlight">RAG Systems:</span> Developed production-grade Retrieval-Augmented Generation systems with vector databases (Pinecone, Weaviate) and large language models, achieving 92% accuracy on domain-specific knowledge retrieval.</li>
-          <li><span class="highlight">Data Pipeline Optimization:</span> Designed and implemented scalable data ingestion and processing pipelines using Airflow and AWS services, reducing data processing time by 45% while ensuring data quality and validation.</li>
-          <li><span class="highlight">Tech Stack:</span> AWS SageMaker, PyTorch, TensorFlow, MLflow, Airflow, LangChain, Vector Databases, Docker, Model Serving, CI/CD, Streamlit, FastAPI</li>
-        </ul>
-      </div>
-      
-      <div class="entry">
-        <div class="entry-header">
-          <div class="entry-title">Data Science Intern</div>
-          <div class="entry-date">Jan 2023 - Apr 2023</div>
-        </div>
-        <div class="entry-subtitle">TechVida Labs, Ahmedabad, India</div>
-        <ul>
-          <li><span class="highlight">Developed RESTful APIs:</span> Designed and deployed scalable Flask-based APIs for data-driven applications, improving system efficiency.</li>
-          <li><span class="highlight">Web Scraping:</span> Built automated web scrapers using BeautifulSoup and Selenium to extract real-time data for analysis.</li>
-          <li><span class="highlight">Data Analysis:</span> Performed extensive data cleaning and analysis using Pandas, NumPy, Excel, Power BI, Tableau, SQL and SQL Server, leading to actionable business insights.</li>
-          <li><span class="highlight">Team Collaboration:</span> Collaborated with cross-functional teams, refining development workflows and reducing project delivery time by 10%.</li>
-          <li><span class="highlight">Visualization Dashboards:</span> Developed interactive dashboards in Tableau to showcase key trends and predictive insights.</li>
-          <li><span class="highlight">Machine Learning Models:</span> Implemented machine learning pipelines and ensemble predictive models using Scikit-learn, TensorFlow, Keras and PyTorch and Pickle to save and load model to improve decision-making processes.</li>
-          <li><span class="highlight">Tech Stack:</span> Flask, Python, Pandas, NumPy, Power BI, SQL, SQL Server, BeautifulSoup, Selenium, Scikit-learn, TensorFlow, Keras, PyTorch, Machine Learning Pipelines</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="section">
-      <h2 class="section-title">Skills and Certification</h2>
+      <h2 class="section-title">TECHNICAL SKILLS</h2>
       
       <div class="skills-category">
-        <div class="skills-category-title">Languages:</div>
-        <div>Python, SQL, R, MATLAB, JavaScript, TypeScript, HTML/CSS, React</div>
+        <div class="skills-category-title">Programming Languages:</div>
+        <div>Python, R, Java, JavaScript, TypeScript, SQL</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">Machine Learning:</div>
-        <div>Scikit-learn, TensorFlow, PyTorch, XGBoost, SMOTE, Random Forest, Logistic Regression, Neural Networks, Transformers, CNN, LSTM</div>
+        <div class="skills-category-title">Machine Learning & Deep Learning:</div>
+        <div>PyTorch, TensorFlow, scikit-learn, XGBoost, LightGBM, YAMNet, Pandas, NumPy</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">MLOps:</div>
-        <div>CI/CD for ML, Model Versioning, Model Monitoring, Feature Stores, ML Pipelines, A/B Testing, Model Registry, MLflow, DVC, Kubeflow</div>
+        <div class="skills-category-title">LLMs and NLP:</div>
+        <div>LangChain, LangGraph, LlamaIndex, BERT, TabTransformer, Hugging Face Transformers, NLTK</div>
       </div>
       
       <div class="skills-category">
         <div class="skills-category-title">Computer Vision:</div>
-        <div>YOLOv8, OpenCV, TensorFlow Object Detection API, Transfer Learning, SigLIP, ByteTrack</div>
+        <div>OpenCV, DeepFace, YOLOV8, VGG-16, ResNet</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">Cloud & Deployment:</div>
-        <div>Amazon SageMaker, AWS S3, SageMaker Endpoints, AWS Lambda, AWS EC2, TensorFlow.js, TFLite, Model Optimization, Docker, Model Serving</div>
+        <div class="skills-category-title">Web and App:</div>
+        <div>Flask, Django, Streamlit, ReactJS, NextJS, Angular, Node.js, React Native, ExpressJS, Redux, Tailwind CSS</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">Data Processing:</div>
-        <div>Pandas, NumPy, UMAP, Feature Engineering, Data Pipelines, ETL, Airflow, Web Scraping, BeautifulSoup, Selenium</div>
+        <div class="skills-category-title">Databases:</div>
+        <div>VectorDB, ChromaDB, MySQL, MSSQL, PostgreSQL, MongoDB, Redis, SQLAlchemy</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">Visualization:</div>
-        <div>Matplotlib, Seaborn, Plotly, Streamlit, Power BI, Tableau, Interactive Dashboards</div>
+        <div class="skills-category-title">Cloud and DevOps:</div>
+        <div>AWS (Cognito, S3, SageMaker, Lambda, EC2 etc.), Azure, Docker, MLflow, ZenML, GitHub Actions, CI/CD</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">Tools:</div>
-        <div>Git, Docker, Jupyter, VS Code</div>
+        <div class="skills-category-title">APIs and Integrations:</div>
+        <div>REST, Groq Cloud API, BeautifulSoup</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">NLP:</div>
-        <div>NLTK, spaCy, Transformers, Word Embeddings, Text Classification, Named Entity Recognition, Sentiment Analysis</div>
+        <div class="skills-category-title">ML Tools:</div>
+        <div>Git, GitHub, GitLab, Jira, CVAT, LabelImg, BentoML, DVC (Data Version Control), TensorBoard, W&B (Weight and Bias)</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">Certifications:</div>
-        <div>IBM Data Science Specialization, Machine Learning with Python (IBM), Databases and SQL for Data Science (IBM), Data Science Math Skills (Duke University), Applied Data Science Capstone (IBM), The Complete 2023 Web Development Bootcamp (Udemy)</div>
+        <div class="skills-category-title">Data Analysis:</div>
+        <div>Excel, Google Sheets, Tableau, Power BI, Matplotlib, Seaborn, Apache Airflow, Azure Databricks</div>
+      </div>
+      
+      <div class="skills-category">
+        <div class="skills-category-title">Core Concepts:</div>
+        <div>CRISP-DM, Supervised/Unsupervised Learning, Generative AI, RAG, Statistical & Time-Series Analysis, Reinforcement Learning, Data Annotation, NLP, Computer Vision, Audio Signals, Multimodal Learning, Vector Embeddings, Performance Tuning</div>
       </div>
     </div>
     
     <div class="section">
-      <h2 class="section-title">Projects</h2>
+      <h2 class="section-title">WORK EXPERIENCE</h2>
       
-      <div class="project">
-        <div class="project-title">Soccer Player Detection and Match Analysis System</div>
-        <div class="project-tech">Python, YOLOv8, Amazon SageMaker, PyTorch, OpenCV, UMAP, ByteTrack</div>
-        <ul>
-          <li><span class="highlight">Computer Vision Pipeline:</span> Developed a comprehensive soccer match analysis system using YOLOv8 models for player, ball, and referee detection with training datasets stored in Amazon S3.</li>
-          <li><span class="highlight">Team Classification:</span> Implemented team classification using SigLIP embeddings and UMAP dimensionality reduction, achieving 94% accuracy in distinguishing teams based on visual features.</li>
-          <li><span class="highlight">Pitch Mapping:</span> Created a homography-based view transformer to map camera coordinates to pitch coordinates, enabling spatial analytics for player positioning and team formations.</li>
-          <li><span class="highlight">Model Training:</span> Trained custom object detection and keypoint recognition models on Amazon SageMaker using GPU instances, optimizing hyperparameters for soccer-specific detection tasks.</li>
-          <li><span class="highlight">Ball Trajectory Analysis:</span> Developed algorithms for ball trajectory tracking and filtering using ByteTrack, providing insights into possession patterns and play development.</li>
-          <li><span class="highlight">Model Deployment:</span> Deployed trained models using SageMaker Endpoints with auto-scaling for real-time video processing, enabling efficient analysis of match footage.</li>
-        </ul>
-      </div>
-      
-      <div class="project">
-        <div class="project-title">Predicting Chronic Conditions Using Machine Learning</div>
-        <div class="project-tech">Python, Scikit-learn, TensorFlow, XGBoost, Streamlit, SMOTE, Pandas</div>
-        <ul>
-          <li><span class="highlight">Data Processing Pipeline:</span> Developed a comprehensive data processing pipeline for the Canadian Community Health Survey dataset, implementing categorical transformations and bivariate statistical analysis to prepare features for chronic condition prediction.</li>
-          <li><span class="highlight">Multi-Target Modeling:</span> Designed a sequential prediction framework for three chronic conditions (high blood pressure, diabetes, cardiovascular disease), reflecting clinical progression and preventing data leakage between models.</li>
-          <li><span class="highlight">Class Imbalance Handling:</span> Implemented SMOTE and RandomUnderSampler techniques to address significant class imbalance, improving model performance for minority health condition classes.</li>
-          <li><span class="highlight">Model Evaluation:</span> Evaluated multiple classification algorithms including Logistic Regression, Random Forest, XGBoost, and Neural Networks using 5-fold cross-validation, achieving ROC-AUC scores of 0.81-0.86 across target conditions.</li>
-        </ul>
-      </div>
-      
-      <div class="project">
-        <div class="project-title">Hand Gesture Recognition with TensorFlow Object Detection API</div>
-        <div class="project-tech">Python, TensorFlow, OpenCV, TensorFlow.js, TFLite, Computer Vision</div>
-        <ul>
-          <li><span class="highlight">Custom Dataset Creation:</span> Developed an image collection pipeline using OpenCV to capture and organize training data for four distinct hand gestures, implementing automated file naming and directory structure creation.</li>
-          <li><span class="highlight">Transfer Learning:</span> Configured and fine-tuned a pre-trained SSD MobileNet V2 FPNLite model using TensorFlow's Object Detection API, adapting the network architecture for the custom gesture recognition task.</li>
-          <li><span class="highlight">Multi-Platform Deployment:</span> Exported the trained model to multiple formats (TensorFlow.js, TFLite) for cross-platform deployment, enabling real-time gesture detection on both web and mobile applications.</li>
-        </ul>
-      </div>
-    </div>
-    
-    <div class="section">
-      <h2 class="section-title">Leadership</h2>
       <div class="entry">
         <div class="entry-header">
-          <div class="entry-title">Dalhousie Digital Innovation Society</div>
-          <div class="entry-date">2024 - Present</div>
+          <div class="entry-title">TechVida Labs, Ahmedabad, Gujarat, India</div>
+          <div class="entry-date">(January 2023 - July 2024)</div>
         </div>
-        <div class="entry-subtitle">Data Science Student Representative</div>
+        
+        <div class="entry-subtitle">Machine Learning Engineer (1.25 years)</div>
         <ul>
-          <li><span class="highlight">Student Advocacy:</span> Representing Data Science students, fostering engagement with faculty, society and peers to enhance learning experiences.</li>
-          <li><span class="highlight">Workshop Development:</span> Proposing and organizing workshops to help students develop essential technical and analytical skills in data science.</li>
+          <li>Integrated OLlama chatbots per custom client needs, enhancing conversational AI capabilities.</li>
+          <li>Developed automated bidding software for TechVida Labs, cutting client acquisition time by 40% and securing 3 new clients.</li>
+          <li>Built a real-time computer vision attendance system using CVAT, YOLOv8, DeepFace, and custom neural networks, achieving 92% accuracy and training on AWS SageMaker.</li>
+          <li>Authored documentation, architecture diagrams, API specs, model performance reports, improving knowledge transfer and reducing onboarding time by 40%.</li>
+          <li>Applied MLOps best practices with AWS, MLflow, Docker, and GitHub Actions, reducing deployment time by 30% and ensuring reproducibility.</li>
+          <li>Mentored 2 data science interns via bi-weekly code reviews and sessions on advanced ML techniques and best practices.</li>
         </ul>
+        
+        <div class="entry-subtitle">Data Science Intern (4 Months)</div>
+        <ul>
+          <li>Developed Python-SQL ETL pipelines, unifying multiple data sources and cutting analysis prep time by 65%.</li>
+          <li>Built Tableau dashboards to visualize customer journeys, enabling data-driven decisions for non-technical stakeholders.</li>
+          <li>Presented data insights in cross-functional meetings, enhancing communication and business acumen.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2 class="section-title">PROJECTS</h2>
+      
+      <div class="project">
+        <div class="project-title">Multimodal Emotion Analyzer on Live Video, Audio and Text (PyTorch, TensorFlow, 3D ResNet, BERT, CNN, Next.js, TypeScript, AWS SageMaker)</div>
+        <ul>
+          <li>Built a multimodal deep learning model combining 3D ResNet (video), BERT (text), and CNN (audio), achieving 85%+ accuracy on 7-label emotion classification using the 10GB+ MELD dataset.</li>
+          <li>Developed a SaaS platform with Next.js and TypeScript, including secure API key management and usage quota tracking for enterprise clients.</li>
+          <li>Designed a video processing pipeline with AWS S3 and SageMaker, creating scalable endpoints and reducing latency by 40%.</li>
+          <li>Created a responsive Tailwind CSS dashboard showing real-time emotion analysis with confidence scores and utterance-level insights.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <div class="project-title">PCC: Predicting Chronic Conditions Using Machine Learning (Sklearn, Deep Neural Networks, SMOTE, Streamlit, Statistical Analysis)</div>
+        <ul>
+          <li>Built a risk assessment tool for hypertension, diabetes, and cardiovascular disease using the Canadian Community Health Survey (100K+ rows, 650+ features).</li>
+          <li>Implemented ML pipelines (Logistic Regression, XGBoost, DNNs) optimized for recall using Youden's J statistic, achieving 95%+ recall.</li>
+          <li>Reduced dimensionality from 650+ to 32 features via Chi-square and bivariate analysis.</li>
+          <li>Deployed an interactive Streamlit app for real-time risk predictions and visual health indicators.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <div class="project-title">Hybrid YOLOV8 TensorFlow Realtime Target Detector (YOLOv8, TensorFlow, OpenCV, CVAT, Docker)</div>
+        <ul>
+          <li>Developed a 4-class real-time object detection system with 95% mAP@0.5 and 20–30 FPS performance.</li>
+          <li>Compared a custom TensorFlow/Keras (MobileNetV2) model with a fine-tuned YOLOv8 version.</li>
+          <li>Deployed Dockerized CVAT for annotating 200 balanced images across gesture classes.</li>
+          <li>Created scripts for annotation format conversion (XML, TFRecord, YOLO) to support diverse training pipelines.</li>
+        </ul>
+      </div>
+      
+      <div class="project">
+        <div class="project-title">Gen_AI_Llama3.1_VectorDB_Bidding_Software (RAG, Llama 3.1, ChromaDB, LangChain, BeautifulSoup4, Tkinter)</div>
+        <ul>
+          <li>Developed an end to end AI tool to automate LinkedIn job scraping, tracking, and personalized cold email generation for consultants.</li>
+          <li>Integrated ChromaDB to store and query team portfolios based on semantic similarity, enabling precise matching job matching via vector search.</li>
+          <li>Leveraged Llama 3.1 (8B) via Groq API and ChromaDB to extract job insights and match team portfolios using semantic search.</li>
+          <li>Built a multithreaded, Tkinter GUI without UI freezing and CLI for responsive job tracking and email generation.</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="section">
+      <h2 class="section-title">EDUCATION<div class="entry-title">Master of Digital Innovation – Data Science</div></h2>
+      <div class="entry">
+        <div class="entry-header">
+          
+          
+        </div>
       </div>
     </div>
   </div>
@@ -336,18 +407,36 @@
       // Add a print button if not in print mode
       if (!window.matchMedia('print').matches) {
         const printButton = document.createElement('button');
-        printButton.textContent = 'Download PDF';
+        printButton.textContent = 'Download Resume as PDF';
+        printButton.id = 'download-button';
         printButton.style.position = 'fixed';
         printButton.style.top = '20px';
         printButton.style.right = '20px';
-        printButton.style.padding = '10px 15px';
+        printButton.style.padding = '12px 20px';
         printButton.style.backgroundColor = '#7c3aed';
         printButton.style.color = 'white';
         printButton.style.border = 'none';
-        printButton.style.borderRadius = '4px';
+        printButton.style.borderRadius = '6px';
         printButton.style.cursor = 'pointer';
-        printButton.style.fontWeight = '500';
+        printButton.style.fontWeight = '600';
         printButton.style.zIndex = '1000';
+        printButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+        printButton.style.display = 'flex';
+        printButton.style.alignItems = 'center';
+        printButton.style.gap = '8px';
+        
+        // Add download icon
+        const downloadIcon = document.createElement('span');
+        downloadIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
+        printButton.prepend(downloadIcon);
+        
+        printButton.addEventListener('mouseover', function() {
+          this.style.backgroundColor = '#6d28d9';
+        });
+        
+        printButton.addEventListener('mouseout', function() {
+          this.style.backgroundColor = '#7c3aed';
+        });
         
         printButton.addEventListener('click', function() {
           window.print();
