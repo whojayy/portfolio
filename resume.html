@@ -114,14 +114,6 @@
       margin-bottom: 0.15rem;
     }
     
-    .skills-list {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.25rem;
-      list-style: none;
-      padding-left: 0;
-    }
-    
     .skills-category {
       margin-bottom: 0.25rem;
       display: flex;
@@ -132,116 +124,24 @@
       font-weight: 600;
       margin-right: 0.25rem;
     }
-    
-    .project {
-      margin-bottom: 0.5rem;
-    }
-    
-    .project-title {
-      font-weight: 600;
-      color: var(--dark);
-      margin-bottom: 0.15rem;
-      font-size: 0.9rem;
-    }
-    
-    .highlight {
-      font-weight: 600;
-    }
-    
+
     @media print {
       body {
         padding: 0;
         background-color: white;
         font-size: 10px;
       }
-      
       .resume {
         box-shadow: none;
         padding: 0.25in;
         max-width: 100%;
         width: 100%;
       }
-      
       @page {
         margin: 0.25in;
         size: letter portrait;
       }
-      
-      .header h1 {
-        font-size: 16px;
-      }
-      
-      .header p {
-        font-size: 12px;
-      }
-      
-      .section-title {
-        font-size: 12px;
-      }
-      
-      .entry-title, .project-title {
-        font-size: 11px;
-      }
-      
-      .entry-subtitle {
-        font-size: 10px;
-      }
-      
-      li {
-        margin-bottom: 0.1rem;
-      }
-      
-      .skills-category {
-        margin-bottom: 0.15rem;
-      }
-      
-      /* Hide the download button when printing */
-      #download-button {
-        display: none;
-      }
-    }
-
-    @media (max-width: 600px) {
-      body {
-        padding: 0.25rem;
-      }
-      
-      .resume {
-        padding: 0.5rem;
-      }
-      
-      .header h1 {
-        font-size: 1.25rem;
-      }
-      
-      .header p {
-        font-size: 0.8rem;
-      }
-      
-      .contact-info {
-        flex-direction: column;
-        gap: 0.25rem;
-      }
-      
-      .section-title {
-        font-size: 1rem;
-      }
-      
-      .entry-header {
-        flex-direction: column;
-        gap: 0.15rem;
-      }
-      
-      .entry-date {
-        margin-top: 0.15rem;
-      }
-      
-      #download-button {
-        top: 5px;
-        right: 5px;
-        padding: 6px 10px;
-        font-size: 0.7rem;
-      }
+      #download-button {display: none;}
     }
   </style>
 </head>
@@ -249,199 +149,165 @@
   <div class="resume">
     <div class="header">
       <h1>Jay Mewada</h1>
-      <p>ML Engineer with 1.5+ years of experience in building scalable models using Machine Learning and cloud technologies</p>
+      <p>Data Engineer & ML Developer | Building predictive pipelines and multimodal models on Azure and AWS</p>
       <div class="contact-info">
         <div>+1 (782) 882-6984</div>
         <div><a href="mailto:jaymewada2001@gmail.com">jaymewada2001@gmail.com</a></div>
-        <div><a href="https://www.linkedin.com/in/jay--mewada/">Linkedin</a></div>
-        <div><a href="https://github.com/whojayy">Github</a></div>
-        <div><a href="#">Personal Portfolio</a></div>
+        <div><a href="https://www.linkedin.com/in/jay--mewada/">LinkedIn</a></div>
+        <div><a href="https://github.com/whojayy">GitHub</a></div>
+        <div><a href="#">Portfolio</a></div>
       </div>
     </div>
     
+    <!-- Updated Skills Section -->
     <div class="section">
       <h2 class="section-title">TECHNICAL SKILLS</h2>
       
       <div class="skills-category">
         <div class="skills-category-title">Programming Languages:</div>
-        <div>Python, R, Java, JavaScript, TypeScript, SQL</div>
+        <div>Python, SQL, JavaScript, TypeScript, R, Java</div>
       </div>
       
       <div class="skills-category">
-        <div class="skills-category-title">Machine Learning & Deep Learning:</div>
-        <div>PyTorch, TensorFlow, scikit-learn, XGBoost, LightGBM, YAMNet, Pandas, NumPy</div>
+        <div class="skills-category-title">Data Engineering & Cloud:</div>
+        <div>Azure Databricks, Azure Data Factory, Azure SQL Database, Data Lake Gen2, AWS (S3, Lambda, SageMaker), PySpark, Delta Lake, Medallion Architecture, CI/CD, GitHub Actions</div>
       </div>
-      
+
       <div class="skills-category">
-        <div class="skills-category-title">LLMs and NLP:</div>
-        <div>LangChain, LangGraph, LlamaIndex, BERT, TabTransformer, Hugging Face Transformers, NLTK</div>
+        <div class="skills-category-title">Machine Learning & Analytics:</div>
+        <div>scikit-learn, XGBoost, TensorFlow, PyTorch, MLflow, Pandas, NumPy, Feature Engineering, Data Profiling, CRISP-DM</div>
       </div>
-      
+
       <div class="skills-category">
-        <div class="skills-category-title">Computer Vision:</div>
-        <div>OpenCV, DeepFace, YOLOV8, VGG-16, ResNet</div>
+        <div class="skills-category-title">NLP & Multimodal ML:</div>
+        <div>BERT, TF-IDF, ClinicalBERT, spaCy, medspaCy, Transformers, Multimodal Data Fusion (structured + text)</div>
       </div>
-      
+
       <div class="skills-category">
-        <div class="skills-category-title">Web and App:</div>
-        <div>Flask, Django, Streamlit, ReactJS, NextJS, Angular, Node.js, React Native, ExpressJS, Redux, Tailwind CSS</div>
+        <div class="skills-category-title">Visualization & Frontend:</div>
+        <div>Power BI, Tableau, ReactJS, Next.js, Tailwind CSS, Streamlit</div>
       </div>
-      
+
       <div class="skills-category">
         <div class="skills-category-title">Databases:</div>
-        <div>VectorDB, ChromaDB, MySQL, MSSQL, PostgreSQL, MongoDB, Redis, SQLAlchemy</div>
+        <div>PostgreSQL, MySQL, MongoDB, ChromaDB, VectorDB, Redis</div>
       </div>
-      
+
       <div class="skills-category">
-        <div class="skills-category-title">Cloud and DevOps:</div>
-        <div>AWS (Cognito, S3, SageMaker, Lambda, EC2 etc.), Azure, Docker, MLflow, ZenML, GitHub Actions, CI/CD</div>
-      </div>
-      
-      <div class="skills-category">
-        <div class="skills-category-title">APIs and Integrations:</div>
-        <div>REST, Groq Cloud API, BeautifulSoup</div>
-      </div>
-      
-      <div class="skills-category">
-        <div class="skills-category-title">ML Tools:</div>
-        <div>Git, GitHub, GitLab, Jira, CVAT, LabelImg, BentoML, DVC (Data Version Control), TensorBoard, W&B (Weight and Bias)</div>
-      </div>
-      
-      <div class="skills-category">
-        <div class="skills-category-title">Data Analysis:</div>
-        <div>Excel, Google Sheets, Tableau, Power BI, Matplotlib, Seaborn, Apache Airflow, Azure Databricks</div>
-      </div>
-      
-      <div class="skills-category">
-        <div class="skills-category-title">Core Concepts:</div>
-        <div>CRISP-DM, Supervised/Unsupervised Learning, Generative AI, RAG, Statistical & Time-Series Analysis, Reinforcement Learning, Data Annotation, NLP, Computer Vision, Audio Signals, Multimodal Learning, Vector Embeddings, Performance Tuning</div>
+        <div class="skills-category-title">Other Tools:</div>
+        <div>Git, Docker, CVAT, JIRA, Excel, Seaborn, Matplotlib, W&B, DVC</div>
       </div>
     </div>
     
+    <!-- Updated Experience Section -->
     <div class="section">
       <h2 class="section-title">WORK EXPERIENCE</h2>
-      
+
       <div class="entry">
         <div class="entry-header">
-          <div class="entry-title">TechVida Labs, Ahmedabad, Gujarat, India</div>
-          <div class="entry-date">(January 2023 - July 2024)</div>
+          <div class="entry-title">Nova Scotia Health – Applied Analytics, Halifax, Canada</div>
+          <div class="entry-date">(September 2025 – Present)</div>
         </div>
-        
-        <div class="entry-subtitle">Machine Learning Engineer (1.25 years)</div>
+        <div class="entry-subtitle">Data Engineer (Co-op)</div>
         <ul>
-          <li>Integrated OLlama chatbots per custom client needs, enhancing conversational AI capabilities.</li>
-          <li>Developed automated bidding software for TechVida Labs, cutting client acquisition time by 40% and securing 3 new clients.</li>
-          <li>Built a real-time computer vision attendance system using CVAT, YOLOv8, DeepFace, and custom neural networks, achieving 92% accuracy and training on AWS SageMaker.</li>
-          <li>Authored documentation, architecture diagrams, API specs, model performance reports, improving knowledge transfer and reducing onboarding time by 40%.</li>
-          <li>Applied MLOps best practices with AWS, MLflow, Docker, and GitHub Actions, reducing deployment time by 30% and ensuring reproducibility.</li>
-          <li>Mentored 2 data science interns via bi-weekly code reviews and sessions on advanced ML techniques and best practices.</li>
+          <li>Designed and implemented Azure Data Factory pipelines to automate incremental data loads from servers to Azure Data Lake Gen2, ensuring reliability and traceability of healthcare data.</li>
+          <li>Developed Databricks ETL workflows using PySpark for cleaning, transforming, and optimizing datasets with Delta Lake under the medallion architecture (bronze–silver–gold layers).</li>
+          <li>Built predictive models integrating structured ED data with free-text clinical notes (NLP), improving LWBS (Left Without Being Seen) prediction accuracy and interpretability.</li>
+          <li>Engineered geospatial, clinical-crowd, and demographic features using postal codes and FSA-based distances for site-level hospital performance analysis.</li>
+          <li>Collaborated closely with the frontend team to design interactive dashboards displaying real-time ED metrics and model outcomes for hospital decision-makers.</li>
+          <li>Enhanced data governance and reproducibility through Git integration, secret scopes, and standardized Databricks compute environments.</li>
         </ul>
-        
-        <div class="entry-subtitle">Data Science Intern (4 Months)</div>
+      </div>
+
+      <div class="entry">
+        <div class="entry-header">
+          <div class="entry-title">TechVida Labs, Ahmedabad, India</div>
+          <div class="entry-date">(January 2023 – July 2024)</div>
+        </div>
+        <div class="entry-subtitle">Machine Learning Engineer</div>
         <ul>
-          <li>Developed Python-SQL ETL pipelines, unifying multiple data sources and cutting analysis prep time by 65%.</li>
-          <li>Built Tableau dashboards to visualize customer journeys, enabling data-driven decisions for non-technical stakeholders.</li>
-          <li>Presented data insights in cross-functional meetings, enhancing communication and business acumen.</li>
+          <li>Integrated OLlama chatbots per client requirements, enhancing conversational AI solutions.</li>
+          <li>Developed automated bidding software reducing client acquisition time by 40% and adding 3 new clients.</li>
+          <li>Built a real-time computer vision attendance system using YOLOv8, DeepFace, and AWS SageMaker achieving 92% accuracy.</li>
+          <li>Authored documentation, architecture diagrams, and model reports improving knowledge transfer by 40%.</li>
+          <li>Applied MLOps practices using Docker, MLflow, and GitHub Actions, reducing deployment time by 30%.</li>
+          <li>Mentored 2 data science interns on ML best practices and pipeline development.</li>
+        </ul>
+
+        <div class="entry-subtitle">Data Science Intern</div>
+        <ul>
+          <li>Developed Python–SQL ETL pipelines consolidating multi-source data and cutting analysis prep time by 65%.</li>
+          <li>Built Tableau dashboards to visualize customer journeys and KPIs.</li>
+          <li>Presented insights in cross-functional meetings improving communication with stakeholders.</li>
         </ul>
       </div>
     </div>
     
+    <!-- Projects Section -->
     <div class="section">
       <h2 class="section-title">PROJECTS</h2>
-      
-      <div class="project">
-        <div class="project-title">Multimodal Emotion Analyzer on Live Video, Audio and Text (PyTorch, TensorFlow, 3D ResNet, BERT, CNN, Next.js, TypeScript, AWS SageMaker)</div>
+
+      <div class="entry">
+        <div class="entry-subtitle">Multimodal Emotion Analyzer on Live Video, Audio and Text</div>
         <ul>
-          <li>Built a multimodal deep learning model combining 3D ResNet (video), BERT (text), and CNN (audio), achieving 85%+ accuracy on 7-label emotion classification using the 10GB+ MELD dataset.</li>
-          <li>Developed a SaaS platform with Next.js and TypeScript, including secure API key management and usage quota tracking for enterprise clients.</li>
-          <li>Designed a video processing pipeline with AWS S3 and SageMaker, creating scalable endpoints and reducing latency by 40%.</li>
-          <li>Created a responsive Tailwind CSS dashboard showing real-time emotion analysis with confidence scores and utterance-level insights.</li>
+          <li>Built a multimodal deep learning model (3D ResNet + BERT + CNN) achieving 85%+ accuracy across 7 emotion labels.</li>
+          <li>Developed a SaaS platform with Next.js, TypeScript, and AWS SageMaker for scalable inference.</li>
+          <li>Designed a Tailwind dashboard showing real-time emotion predictions with utterance-level confidence.</li>
         </ul>
       </div>
-      
-      <div class="project">
-        <div class="project-title">PCC: Predicting Chronic Conditions Using Machine Learning (Sklearn, Deep Neural Networks, SMOTE, Streamlit, Statistical Analysis)</div>
+
+      <div class="entry">
+        <div class="entry-subtitle">PCC: Predicting Chronic Conditions Using ML</div>
         <ul>
-          <li>Built a risk assessment tool for hypertension, diabetes, and cardiovascular disease using the Canadian Community Health Survey (100K+ rows, 650+ features).</li>
-          <li>Implemented ML pipelines (Logistic Regression, XGBoost, DNNs) optimized for recall using Youden's J statistic, achieving 95%+ recall.</li>
-          <li>Reduced dimensionality from 650+ to 32 features via Chi-square and bivariate analysis.</li>
-          <li>Deployed an interactive Streamlit app for real-time risk predictions and visual health indicators.</li>
+          <li>Developed risk prediction pipelines for hypertension and diabetes using CCHS data (100K+ rows, 650+ features).</li>
+          <li>Applied feature selection via Chi-square and optimized recall with Youden’s J statistic (95% recall).</li>
+          <li>Built an interactive Streamlit tool for risk scoring and visualization.</li>
         </ul>
       </div>
-      
-      <div class="project">
-        <div class="project-title">Hybrid YOLOV8 TensorFlow Realtime Target Detector (YOLOv8, TensorFlow, OpenCV, CVAT, Docker)</div>
+
+      <div class="entry">
+        <div class="entry-subtitle">Hybrid YOLOv8 TensorFlow Realtime Target Detector</div>
         <ul>
-          <li>Developed a 4-class real-time object detection system with 95% mAP@0.5 and 20–30 FPS performance.</li>
-          <li>Compared a custom TensorFlow/Keras (MobileNetV2) model with a fine-tuned YOLOv8 version.</li>
-          <li>Deployed Dockerized CVAT for annotating 200 balanced images across gesture classes.</li>
-          <li>Created scripts for annotation format conversion (XML, TFRecord, YOLO) to support diverse training pipelines.</li>
+          <li>Developed a 4-class real-time detection system achieving 95% mAP@0.5 at 25 FPS.</li>
+          <li>Dockerized CVAT for annotation management and model training pipeline automation.</li>
         </ul>
       </div>
-      
-      <div class="project">
-        <div class="project-title">Gen_AI_Llama3.1_VectorDB_Bidding_Software (RAG, Llama 3.1, ChromaDB, LangChain, BeautifulSoup4, Tkinter)</div>
+
+      <div class="entry">
+        <div class="entry-subtitle">Gen_AI_Llama3.1_VectorDB_Bidding_Software</div>
         <ul>
-          <li>Developed an end to end AI tool to automate LinkedIn job scraping, tracking, and personalized cold email generation for consultants.</li>
-          <li>Integrated ChromaDB to store and query team portfolios based on semantic similarity, enabling precise matching job matching via vector search.</li>
-          <li>Leveraged Llama 3.1 (8B) via Groq API and ChromaDB to extract job insights and match team portfolios using semantic search.</li>
-          <li>Built a multithreaded, Tkinter GUI without UI freezing and CLI for responsive job tracking and email generation.</li>
+          <li>Automated LinkedIn job scraping and cold email generation using RAG with Llama 3.1 and ChromaDB.</li>
+          <li>Integrated semantic search for matching consultants to projects via vector embeddings.</li>
         </ul>
       </div>
     </div>
-    
+
     <div class="section">
-      <h2 class="section-title">EDUCATION<div class="entry-title">Master of Digital Innovation – Data Science</div></h2>
+      <h2 class="section-title">EDUCATION</h2>
       <div class="entry">
-        <div class="entry-header">
-          
-          
-        </div>
+        <div class="entry-title">Master of Digital Innovation – Data Science</div>
+        <div class="entry-subtitle">Dalhousie University, Halifax, Canada (Expected Graduation: 2026)</div>
+      </div>
+      <div class="entry">
+        <div class="entry-title">Bachelor of Computer Engineering</div>
+        <div class="entry-subtitle">Gujarat Technological University, India (2022)</div>
       </div>
     </div>
   </div>
-  
+
   <script>
-    // Simple print functionality
     window.onload = function() {
-      // Add a print button if not in print mode
       if (!window.matchMedia('print').matches) {
         const printButton = document.createElement('button');
         printButton.textContent = 'Download Resume as PDF';
         printButton.id = 'download-button';
-        printButton.style.position = 'fixed';
-        printButton.style.top = '20px';
-        printButton.style.right = '20px';
-        printButton.style.padding = '12px 20px';
-        printButton.style.backgroundColor = '#7c3aed';
-        printButton.style.color = 'white';
-        printButton.style.border = 'none';
-        printButton.style.borderRadius = '6px';
-        printButton.style.cursor = 'pointer';
-        printButton.style.fontWeight = '600';
-        printButton.style.zIndex = '1000';
-        printButton.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
-        printButton.style.display = 'flex';
-        printButton.style.alignItems = 'center';
-        printButton.style.gap = '8px';
-        
-        // Add download icon
-        const downloadIcon = document.createElement('span');
-        downloadIcon.innerHTML = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>`;
-        printButton.prepend(downloadIcon);
-        
-        printButton.addEventListener('mouseover', function() {
-          this.style.backgroundColor = '#6d28d9';
+        Object.assign(printButton.style, {
+          position: 'fixed', top: '20px', right: '20px',
+          padding: '12px 20px', backgroundColor: '#7c3aed',
+          color: 'white', border: 'none', borderRadius: '6px',
+          cursor: 'pointer', fontWeight: '600', zIndex: '1000'
         });
-        
-        printButton.addEventListener('mouseout', function() {
-          this.style.backgroundColor = '#7c3aed';
-        });
-        
-        printButton.addEventListener('click', function() {
-          window.print();
-        });
-        
+        printButton.onclick = () => window.print();
         document.body.appendChild(printButton);
       }
     };
