@@ -29,17 +29,17 @@ export default function Home() {
     <main className="min-h-screen">
       <Hero />
       <About />
-      <Skills />
-      <ErrorBoundary FallbackComponent={ErrorFallback}>
-        <Projects />
-      </ErrorBoundary>
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <Experience />
       </ErrorBoundary>
-      <Certifications />
+      <Skills />
       <ErrorBoundary FallbackComponent={ErrorFallback}>
         <TechStack />
       </ErrorBoundary>
+      <ErrorBoundary FallbackComponent={ErrorFallback}>
+        <Projects />
+      </ErrorBoundary>
+      <Certifications />
       <Education />
       <Resume />
       <Contact />

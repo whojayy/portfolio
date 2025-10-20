@@ -57,7 +57,7 @@ export default function TechStack() {
 
                 {/* AWS */}
                 <div className="bg-card border rounded-lg p-6 flex items-center justify-center text-center transition-all duration-200 hover:scale-105 hover:shadow-md hover:border-primary/50">
-                  <h3 className="font-medium">AWS</h3>
+                  <h3 className="font-medium">AWS Sagemaker</h3>
                 </div>
 
                 {/* Power BI */}
@@ -117,17 +117,17 @@ export default function TechStack() {
 
                 {/* Azure */}
                 <div className="bg-card border rounded-lg p-6 flex items-center justify-center text-center transition-all duration-200 hover:scale-105 hover:shadow-md hover:border-primary/50">
-                  <h3 className="font-medium">Azure</h3>
+                  <h3 className="font-medium">Azure Delta Lake</h3>
                 </div>
 
                 {/* SQL */}
                 <div className="bg-card border rounded-lg p-6 flex items-center justify-center text-center transition-all duration-200 hover:scale-105 hover:shadow-md hover:border-primary/50">
-                  <h3 className="font-medium">SQL</h3>
+                  <h3 className="font-medium">Azure Data Factory</h3>
                 </div>
 
                 {/* MongoDB */}
                 <div className="bg-card border rounded-lg p-6 flex items-center justify-center text-center transition-all duration-200 hover:scale-105 hover:shadow-md hover:border-primary/50">
-                  <h3 className="font-medium">MongoDB</h3>
+                  <h3 className="font-medium">SQL | NoSQL | VectorDB</h3>
                 </div>
 
                 {/* FastAPI */}
@@ -137,7 +137,7 @@ export default function TechStack() {
 
                 {/* NLP */}
                 <div className="bg-card border rounded-lg p-6 flex items-center justify-center text-center transition-all duration-200 hover:scale-105 hover:shadow-md hover:border-primary/50">
-                  <h3 className="font-medium">NLP</h3>
+                  <h3 className="font-medium">Azure Databricks</h3>
                 </div>
               </div>
             </CardContent>
