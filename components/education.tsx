@@ -16,7 +16,7 @@ export default function Education() {
               <CardHeader>
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                   <CardTitle>Master of Digital Innovation - Data Science</CardTitle>
-                  <Badge variant="outline">Sept. 2024</Badge>
+                  <Badge variant="outline">Sept 2024 - Dec 2025</Badge>
                 </div>
                 <CardDescription className="text-base">Dalhousie University, Halifax, NS</CardDescription>
               </CardHeader>
