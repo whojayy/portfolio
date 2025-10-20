@@ -15,6 +15,64 @@ export default function Experience() {
             <Card>
               <CardHeader>
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                  <CardTitle>Data Engineer</CardTitle>
+                  <Badge variant="outline">Sep 2025 - Present</Badge>
+                </div>
+                <CardDescription className="text-base">
+                  Nova Scotia Health – Applied Analytics, Halifax, Canada
+                </CardDescription>
+              </CardHeader>
+
+              <CardContent className="space-y-4">
+                <ul className="list-disc pl-5 space-y-2">
+                  <li>
+                    <span className="font-medium">Designed and automated Azure Data Factory pipelines</span>
+        {" "}to handle incremental data ingestion from SQL servers to Azure Data Lake Gen2, ensuring reliability, scalability, and traceability.
+                  </li>
+                  <li>
+                    <span className="font-medium">Developed Databricks ETL workflows</span>
+        {" "}using PySpark for cleaning, transformation, and Delta Lake optimization under the medallion architecture (bronze–silver–gold layers).
+                  </li>
+                  <li>
+                    <span className="font-medium">Built predictive models integrating multimodal data</span>
+        {" "}by combining structured ED data and free-text clinical notes using NLP and ML algorithms to enhance LWBS (Left Without Being Seen) prediction accuracy.
+                  </li>
+                  <li>
+                    <span className="font-medium">Engineered geospatial, demographic, and clinical-crowd features</span>
+        {" "}to support hospital-level performance analytics and real-time risk modeling across multiple emergency departments.
+                  </li>
+                  <li>
+                    <span className="font-medium">Collaborated cross-functionally with frontend and analytics teams</span>
+        {" "}to design interactive dashboards visualizing live ED insights and model outputs for hospital decision-makers.
+                  </li>
+                  <li>
+                    <span className="font-medium">Enhanced data governance and reproducibility</span>
+        {" "}through Git integration, secret scopes, and standardized Databricks compute configurations.
+                  </li>
+                </ul>
+
+                <div className="mt-4">
+                  <p className="font-medium">Tech Stack:</p>
+                  <div className="flex flex-wrap gap-2 mt-2">
+                    <Badge variant="outline">Azure Databricks</Badge>
+                    <Badge variant="outline">Azure Data Factory</Badge>
+                    <Badge variant="outline">Azure SQL Database</Badge>
+                    <Badge variant="outline">Data Lake Gen2</Badge>
+                    <Badge variant="outline">PySpark</Badge>
+                    <Badge variant="outline">Delta Lake</Badge>
+                    <Badge variant="outline">Medallion Architecture</Badge>
+                    <Badge variant="outline">NLP</Badge>
+                    <Badge variant="outline">BERT</Badge>
+                    <Badge variant="outline">MLflow</Badge>
+                    <Badge variant="outline">GitLab</Badge>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                   <CardTitle>Machine Learning Engineer</CardTitle>
                   <Badge variant="outline">Apr 2023 - Jul 2024</Badge>
                 </div>
