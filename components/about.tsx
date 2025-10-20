@@ -29,20 +29,13 @@ export default function About() {
               </div>
               <div className="space-y-4">
                 <p>
-                  I'm a Data Scientist and Machine Learning Engineer with expertise in developing innovative solutions
-                  for complex data problems. Currently pursuing a Master of Digital Innovation with a focus on Data
-                  Science at Dalhousie University.
+                  I have worn multiple hats across 2+ years of my professional journey, serving as a Data Scientist, Machine Learning Engineer, and Data Engineer, most recently at Nova Scotia Health, where I developed interpretable ML models and implemented MLOps practices on healthcare data to support real-world clinical decision-making and operational efficiency.
                 </p>
                 <p>
-                  My technical expertise spans across machine learning, MLOps, computer vision, and AI application
-                  development. I specialize in building end-to-end ML pipelines from data ingestion to production
-                  deployment, with a strong focus on creating scalable and maintainable AI systems.
+                  I hold a Master of Digital Innovation – Data Science from Dalhousie University. My expertise spans machine learning, MLOps, computer vision, and AI application software development, with hands-on experience in building end-to-end ML pipelines and software development. I’m passionate about developing robust, explainable, and scalable AI software systems that integrate seamlessly with enterprise workflows.
                 </p>
                 <p>
-                  With over 1.5 years of professional experience at TechVida Labs, I've implemented production-grade
-                  machine learning solutions, developed agentic AI applications, and built RAG systems that deliver real
-                  business value. I'm passionate about applying best practices in software engineering to data science
-                  projects.
+                  Previously at TechVida Labs, I implemented production-grade ML and AI systems, built RAG-based and agentic AI applications, and engineered cloud-native data pipelines that delivered measurable business value.
                 </p>
               </div>
               <div className="flex flex-col gap-2 sm:flex-row">
