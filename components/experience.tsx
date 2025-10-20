@@ -109,7 +109,7 @@ export default function Experience() {
               <CardHeader>
                 <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                   <CardTitle>Data Science Student Representative</CardTitle>
-                  <Badge variant="outline">2024 - Present</Badge>
+                  <Badge variant="outline">Dec 2024 - Dec 2025</Badge>
                 </div>
                 <CardDescription className="text-base">Dalhousie Digital Innovation Society</CardDescription>
               </CardHeader>
