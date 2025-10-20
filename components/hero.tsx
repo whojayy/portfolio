@@ -105,10 +105,10 @@ export default function Hero() {
               ))}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground transition-transform duration-300 hover:scale-110 cursor-pointer">
-              Data Scientist & Machine Learning Engineer
+              Data Scientist, Machine Learning Engineer & Data Engineer
             </p>
             <p className="text-lg md:text-xl text-foreground font-medium transition-transform duration-300 hover:scale-110 cursor-pointer">
-              Seeking Fall 2025 Co-op | Open to Full time Opportunities
+              2+ Years of Experience | Open to Full-time Opportunities
             </p>
           </div>
           <p className="max-w-[700px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed transition-transform duration-300 hover:scale-105 cursor-pointer">
