@@ -58,7 +58,7 @@ export default function About() {
                           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                         </svg>
                       </div>
-                      <span>Data Science & Machine Learning specialist</span>
+                      <span>Data Science, ML & Data Engineering specialist</span>
                     </li>
                     <li className="flex items-start">
                       <div className="mr-2 mt-1 bg-primary/20 p-1 rounded-full">
